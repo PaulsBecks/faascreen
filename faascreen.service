@@ -1,0 +1,11 @@
+[Unit]
+Description=Run the faascreen programm in the background
+
+[Service]
+ExecStart=/bin/sh /home/pi/faascreen/setup.sh
+ExecReload=/bin/sh /home/pi/faascreen/setup.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
+Alias=faascreen.service
